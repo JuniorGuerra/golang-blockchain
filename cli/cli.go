@@ -48,13 +48,7 @@ func (cli *CommandLine) listAddresses() {
 
 func (cli *CommandLine) createWallet() {
 	wallets, _ := wallet.CreateWallets()
-
-	fmt.Println("Creating a new wallet...", wallets)
-
 	address := wallets.AddWallet()
-
-	fmt.Println("New address is: ", address, wallets)
-
 	wallets.SaveJsonWallet()
 
 	fmt.Printf("New address is: %s\n", address)
